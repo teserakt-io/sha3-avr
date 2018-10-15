@@ -1,11 +1,15 @@
 sha3-avr
 ==========
 
-A public domain implementation of **SHA-3** on 8-bit AVR
-microcontroller, just because *you never know when you might need one*!
+2018-06-28  Markku-Juhani O. Saarinen <markku@teserakt.io>
 
-Written by Markku-Juhani O. Saarinen <markku@teserakt.io> for Teserakt.
+A public domain implementation of **SHA-3** on 8-bit 
+AVR microcontroller, just because *you never know when you might need one* !
 
+
+(c) 2018 Teserakt AG  https://teserakt.io
+
+See LICENSE for license details (it's unlicense, essentially free). 
 
 ## Prerequisites
 
@@ -35,7 +39,6 @@ https://github.com/buserror/simavr) and test the code with `make sim`.
 
 This cycle-perfect simulator simulates even the UART so the output will be
 basically equivalent to real thing:
-
 ```
 $ make sim
 mkdir -p obj/
@@ -73,9 +76,7 @@ avrdude -v -c wiring -p m2560 -P /dev/ttyACM0 \
 
 avrdude: Version 6.3
 ```
-
 .. more stuff.. and then the interesting bit:
-
 ```
 stty -F /dev/ttyACM0 raw icanon eof \^d 38400
 cat < /dev/ttyACM0
@@ -89,10 +90,9 @@ Run #04 145850 ticks / block
 Run #05 145848 ticks / block
 ```
 
+### Have fun
 
+Cheers, -markku
 
-## Intellectual property
+**ABSOLUTELY NO WARRANTY WHATSOEVER**
 
-Copyright (c) 2018 Teserakt AG 
-
-See [LICENSE](LICENSE) for license details (it's unlicense, essentially free). 
